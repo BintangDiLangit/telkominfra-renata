@@ -1,0 +1,50 @@
+$primary: #ee1c25; // Ganti dengan warna yang Anda inginkan
+
+#accordionSidebar {
+    background-color: #ee1c25; /* Ganti dengan warna yang Anda inginkan */
+}
+
+$sidebar-bg: #34495e; // Warna latar belakang sidebar
+$sidebar-link-color: #ecf0f1; // Warna tautan di sidebar
+$sidebar-link-hover-color: #bdc3c7; // Warna tautan di sidebar saat di-hover
+$sidebar-link-active-bg: #2c3e50; // Warna latar belakang tautan aktif di sidebar
+$sidebar-link-active-color: #fff; // Warna teks tautan aktif di sidebar
+
+.sidebar {
+    background-color: $sidebar-bg;
+
+    .nav-item {
+        a.nav-link {
+            color: $sidebar-link-color;
+
+            &:hover {
+                color: $sidebar-link-hover-color;
+            }
+
+            &.active {
+                background-color: $sidebar-link-active-bg;
+                color: $sidebar-link-active-color;
+            }
+        }
+    }
+}
+
+$primary-gradient-start: #ee1c25; // Warna awal gradient merah
+$primary-gradient-end: #eb3841;   // Warna akhir gradient merah
+
+.bg-gradient-primary {
+    background: linear-gradient(180deg, $primary-gradient-start 10%, $primary-gradient-end 100%);
+}
+
+.sidebar-heading {
+    color: #ffffff !important;
+}
+
+.sidebar-divider {
+    height: 1px; /* Atur sesuai keinginan Anda */
+    border: none; /* Ini memastikan bahwa tidak ada border tambahan yang menambah ketebalan */
+    background-color: #9f9f9f; /* Anda dapat mengatur warna sesuai keinginan Anda */
+}
+
+// Import file bootstrap setelah mendefinisikan variabel kustom
+@import "../vendor/bootstrap/scss/bootstrap.scss";

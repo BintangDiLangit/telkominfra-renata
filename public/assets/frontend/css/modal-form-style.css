@@ -1,0 +1,434 @@
+#form-modal .modal-dialog {
+    width: 550px;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+#form-modal .name-form {
+    font-size: 12px;
+    font-weight: 700;
+    color: #4b4b4b;
+}
+
+/* #form-modal form{
+    width: 100%;
+    border: 1px solid;
+} */
+
+#form-modal .input-group label {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    color: #313131;
+    width: 100%;
+}
+
+#form-modal .input-group input,
+#form-modal .input-group select,
+#form-modal .input-group textarea {
+    width: 100%;
+    height: 37px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #0c0c0c;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    border: 1px solid #d9d9d9;
+}
+
+#form-modal .input-group textarea {
+    height: 98px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#form-modal .input-group .input-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#form-modal .input-group .input-flex .tempat-lahir {
+    width: 71%;
+}
+#form-modal .input-group .input-flex .tanggal-lahir {
+    width: 128px;
+}
+
+#form-modal .button-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#form-modal button {
+    cursor: pointer;
+}
+
+#form-modal .button-action .button-tambah {
+    background-color: #ffffff;
+    border: 1px solid #ed1c25;
+    color: #ed1c25;
+    font-size: 12px;
+    font-weight: 500;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+
+#form-modal .button-action .action-batal-simpan button {
+    font-size: 12px;
+    font-weight: 500;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+
+#form-modal .button-action .action-batal-simpan button.batal {
+    background-color: #ffbec1;
+    border: 1px solid #ffbec1;
+    color: #ff0000;
+}
+
+#form-modal .button-action .action-batal-simpan button.simpan {
+    background-color: #ed1c25;
+    border: 1px solid #ed1c25;
+    color: #ffffff;
+}
+
+/* Tahun Mulai */
+#form-modal .flex-group {
+    display: flex;
+    width: 300px;
+    /* border: 1px solid; */
+}
+
+#form-modal .flex-group label {
+    width: 100%;
+}
+
+#form-modal .flex-group .input-tahun {
+    width: 128px;
+    position: relative;
+}
+
+#form-modal .flex-group .input-tahun i {
+    position: absolute;
+    z-index: 30;
+    color: #a3a3a3;
+    top: 10px;
+    left: 10px;
+}
+
+#form-modal .flex-group .input-tahun select {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 25px;
+}
+
+/* Button Tambah yang tidak sejajar dengan button simpan dan batal */
+#form-modal .button-tambah {
+    background-color: #ffffff;
+    border: 1px solid #ed1c25;
+    color: #ed1c25;
+    font-size: 12px;
+    font-weight: 500;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#form-modal .button-hapus {
+    background-color: #ffffff;
+    border: 1px solid #ed1c25;
+    color: #ed1c25;
+    font-size: 12px;
+    font-weight: 500;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* File input */
+#form-modal .input-group .upload-file {
+    display: none;
+}
+
+#form-modal .input-group .nama-file {
+    background-color: #ffffff;
+    border: 1px solid #ed1c25;
+    color: #ed1c25;
+    font-size: 12px;
+    font-weight: 500;
+    /* height: 30px; */
+    width: auto;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* -------------------------------
+--------Lamaran Saya Modal--------
+---------------------------------*/
+#lamaran-interview .nama-lamaran {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
+#lamaran-interview .flex-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* border: 1px solid; */
+}
+
+#lamaran-interview .flex-header .tempat {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ee1c25;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#lamaran-interview .flex-header .flex-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lamaran-interview .flex-header .flex-status .status-lowongan {
+    font-size: 10px;
+    font-weight: 500;
+    margin-right: 30px;
+    color: #4da934;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#lamaran-interview .flex-header .flex-status ul {
+    margin: auto;
+}
+
+#lamaran-interview .flex-header .flex-status ul li {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 10px;
+    font-weight: 400;
+    color: #b3b3b3;
+    font-style: italic;
+}
+
+#lamaran-interview .flex-header .flex-status ul li p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#lamaran-interview .garis-modal {
+    border: 1px solid;
+    width: 100%;
+    color: #cfcfcf;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#lamaran-interview .flex-keterangan-lamaran {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+#lamaran-interview .flex-keterangan-lamaran .isi-lamaran2 {
+    width: 55%;
+}
+
+#lamaran-interview .flex-keterangan-lamaran .isi-lamaran1 .deskripsi {
+    display: flex;
+    align-items: center;
+}
+
+#lamaran-interview .flex-keterangan-lamaran .isi-lamaran1 .deskripsi i {
+    font-size: 12px;
+    color: #bababa;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+}
+
+#lamaran-interview
+    .flex-keterangan-lamaran
+    .isi-lamaran1
+    .deskripsi
+    .text-deskripsi {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4d4d4d;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#lamaran-interview .flex-keterangan-lamaran .isi-lamaran-line {
+    width: 0px;
+    height: 54px;
+    border: 1px #c2c2c2 solid;
+    margin: auto;
+}
+
+#lamaran-interview .flex-keterangan-lamaran .isi-lamaran2 .gaji,
+#lamaran-interview .flex-keterangan-lamaran .isi-lamaran2 .gabung {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#lamaran-interview .flex-keterangan-lamaran .isi-lamaran2 .gaji p,
+#lamaran-interview .flex-keterangan-lamaran .isi-lamaran2 .gabung p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: auto;
+    color: #4d4d4d;
+}
+
+#lamaran-interview .flex-keterangan-lamaran .isi-lamaran2 .gaji p.bold,
+#lamaran-interview .flex-keterangan-lamaran .isi-lamaran2 .gabung p.bold {
+    font-weight: 500;
+}
+
+#lamaran-interview .deskripsi {
+    font-size: 12px;
+    font-weight: 400;
+    color: #4d4d4d;
+    text-align: justify;
+}
+
+#lamaran-interview .proses ul li {
+    list-style: none;
+}
+
+#lamaran-interview .proses {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 125px;
+}
+#lamaran-interview .proses .tanggal,
+#lamaran-interview .proses .bar-proses,
+#lamaran-interview .proses .nama-proses {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#lamaran-interview .proses .tanggal ul li,
+#lamaran-interview .proses .bar-proses ul li,
+#lamaran-interview .proses .nama-proses ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+}
+
+#lamaran-interview .proses .tanggal ul li p {
+    font-size: 10px;
+    font-weight: 500;
+    color: #b3b3b3;
+    padding-top: 5px;
+    margin-right: 10px;
+}
+
+#lamaran-interview .proses .bar-proses ul li i {
+    font-size: 12px;
+    color: #dfdfdf;
+    padding-top: 5px;
+    z-index: 200;
+}
+
+#lamaran-interview .proses .bar-proses ul li i.active {
+    color: #ff0000;
+}
+
+#lamaran-interview .proses .bar-proses {
+    position: relative;
+    /* border:1px solid; */
+}
+
+#lamaran-interview .proses .bar-proses .garis-proses {
+    position: absolute;
+    height: 90px;
+    width: 3px;
+    background-color: #dfdfdf;
+    /* z-index: ; */
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#lamaran-interview .proses .bar-proses .garis-proses .persen {
+    width: 100%;
+    background-color: #ff0000;
+    z-index: 800;
+}
+
+#lamaran-interview .proses .nama-proses ul li p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #848484;
+    padding-top: 2px;
+    margin-left: 10px;
+}
+
+#lamaran-interview .proses .nama-proses ul li p.active {
+    color: #ff0000;
+}
+
+#lamaran-interview .interview {
+    display: flex;
+}
+
+#lamaran-interview .interview p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+#lamaran-interview .interview .head-interview p {
+    color: #848484;
+}
+#lamaran-interview .interview .isi-interview p {
+    color: #222222;
+    text-decoration: none;
+}
+
+#lamaran-interview .interview .isi-interview p a {
+    text-decoration: underline;
+    color: #0075ff;
+}
+
+#lamaran-interview .flex-close {
+    display: flex;
+    justify-content: end;
+}
+
+#lamaran-interview .flex-close .close-modal-interview {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    border: 1px solid #ed1c25;
+    background-color: #ed1c25;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}

@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================
+   =----------NAVBAR----------=
+   ============================*/
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0px 5px #6d6f71;
+    height: 82px;
+    z-index: 1000;
+}
+
+.navbar-toggler .fa-bars {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.navbar-collapse {
+    margin-left: 70px;
+}
+
+.nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-item .nav-link {
+    font-weight: 500;
+    color: #393939;
+}
+
+.notifiction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.garis-verical {
+    width: 0px;
+    height: 26px;
+    border: 1px #c2c2c2 solid;
+}
+
+.nav-link .fa-bell {
+    font-size: 24px;
+    text-align: center;
+    color: #c2c2c2;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.profile-user {
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.profile-user * {
+    margin: 0;
+    /* margin-left: 8px; */
+    margin-right: 10px;
+}
+
+.profile-user .fa-angle-down {
+    align-self: self-start;
+    font-size: 22px;
+    color: #6d6e73;
+}
+
+.profile-user .name {
+    color: #6d6e73;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile-user .status {
+    color: #ee1c25;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile-user .foto-profile {
+    width: 33px;
+    border-radius: 50%;
+}
+
+/* GUEST ACCOUNT */
+.auth-button {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    /* border: 1px solid #000000; */
+}
+
+.auth-button a {
+    width: 79px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.auth-button a#masuk {
+    border: 1px #ee1c25 solid;
+    background-color: #ee1c25;
+    color: #ffffff;
+}
+
+.auth-button a#daftar {
+    border: 1px #6d6e73 solid;
+    /* background-color: #EE1C25; */
+    color: #6d6e73;
+}
+
+/* ============================
+   =-----------MAIN-----------=
+   ============================*/
+
+main {
+    margin-top: 100px;
+}
+
+.header-elearning {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header-elearning h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 150px;
+}
+
+.header-elearning .pencarian {
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.header-elearning .pencarian input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 20px;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.header-elearning .pencarian button {
+    width: 38px;
+    height: 38px;
+    background-color: #ee1c25;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.flex-main {
+    display: flex;
+}
+
+/* Kumpulan elearning */
+
+.daftar-elearning {
+    width: 392px;
+}
+
+.daftar-elearning .card-elearning {
+    width: 392px;
+    height: 155px;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.daftar-elearning .card-elearning .flex-card-inside-elearning {
+    display: flex;
+}
+
+.daftar-elearning .card-elearning .flex-card-inside-elearning img {
+    height: 155px;
+    border-radius: 5px 0 0 5px;
+}
+
+.daftar-elearning
+    .card-elearning
+    .flex-card-inside-elearning
+    .deskripsi-elearning {
+    padding: 20px;
+}
+
+.daftar-elearning
+    .card-elearning
+    .flex-card-inside-elearning
+    .deskripsi-elearning
+    h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    height: 35px;
+}
+
+.daftar-elearning
+    .card-elearning
+    .flex-card-inside-elearning
+    .deskripsi-elearning
+    p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4d4d4d;
+}
+
+.daftar-elearning .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 30px;
+}
+
+.daftar-elearning .pagination button {
+    width: 79px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.daftar-elearning .pagination button.back {
+    background-color: #d7d7d7;
+    color: #ffffff;
+}
+
+.daftar-elearning .pagination button.next {
+    background-color: #ed1c25;
+    color: #ffffff;
+}
+
+.daftar-elearning .pagination .number {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.daftar-elearning .pagination .number a {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #b7b7b7;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.daftar-elearning .pagination .number a.active {
+    color: #ed1c25;
+}
+
+.content-elearning {
+    width: 100%;
+    height: 735px;
+    border: 1px solid #ee1c25;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.content-elearning iframe {
+    width: 100%;
+    height: 380px;
+    border-radius: 15px;
+}
+
+.content-elearning .rating {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.content-elearning .rating .bintang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+}
+
+.content-elearning .rating .bintang i {
+    color: #ffbb00;
+    font-size: 16px;
+}
+.content-elearning .rating .rata-rata {
+    font-size: 16px;
+    margin-left: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: 600;
+}
+
+.content-elearning .rating .rata-rata span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #aeaeae;
+}
+
+/* ============================
+   =----------FOOTER----------=
+   ============================*/
+footer {
+    padding-top: 20px;
+    height: 280px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: 10px 0px 10px #0000001a;
+}
+
+footer .flex-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .flex-footer .footer-child {
+    width: 25%;
+}
+
+footer .flex-footer .img-logo-footer {
+    width: 175px;
+}
+
+footer .flex-footer .moto {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #4d4d4d;
+}
+
+footer .flex-footer .footer-child h2 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+footer .flex-footer .footer-child li a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #4d4d4d;
+    display: flex;
+    align-items: start;
+}
+
+footer .flex-footer .footer-child li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+footer .flex-footer .footer-child li a i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+.copyright p {
+    font-size: 11px;
+    font-weight: 500;
+    color: #4d4d4d;
+    text-align: center;
+    margin: auto;
+}

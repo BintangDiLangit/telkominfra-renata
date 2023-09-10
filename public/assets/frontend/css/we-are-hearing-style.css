@@ -1,0 +1,1397 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================
+   =----------NAVBAR----------=
+   ============================*/
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0px 5px #6d6f71;
+    height: 82px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-toggler i {
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.navbar .collapse-navbar ul {
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+
+.navbar .collapse-navbar li.active-nav .nav-link {
+    background-color: #fcddde;
+    color: #ee1c25;
+    border-radius: 5px;
+}
+
+.navbar .collapse-navbar ul li .nav-link {
+    font-weight: 500;
+    color: #393939;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.notifiction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.garis-verical {
+    width: 0px;
+    height: 26px;
+    border: 1px #c2c2c2 solid;
+}
+
+.notifiction .nav-link {
+    /* border: 1px solid; */
+    position: relative;
+}
+
+.nav-link .fa-bell {
+    font-size: 20px;
+    text-align: center;
+    color: #c2c2c2;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-link .fa-bell .bulat {
+    position: absolute;
+    top: 6px;
+    right: 25px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #ee1c25;
+    border: 2px solid #ffffff;
+}
+
+/* -------------------------
+    Modal Notification 
+----------------------------*/
+#notification-modal .modal-dialog {
+    margin-right: 200px;
+    margin-top: 45px;
+    width: 338px;
+    padding: 20px;
+}
+
+#notification-modal .header-notif {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+}
+
+#notification-modal .garis-notif {
+    border: 1px solid #dfdfdf;
+    width: 100%;
+}
+
+#notification-modal .nav-notif ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    height: 40px;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        bottom: 1px;
+        background-color: #cfcfcf;
+    }
+}
+
+#notification-modal .nav-notif ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+#notification-modal .nav-notif ul li.active {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 3px;
+        bottom: 1px;
+        background-color: #ee1c25;
+    }
+}
+
+#notification-modal .nav-notif ul li.active p {
+    color: #ff0000;
+    font-weight: 600;
+}
+
+#notification-modal .nav-notif ul li p {
+    margin: auto;
+    font-size: 11px;
+    font-weight: 500;
+    color: #4d4d4d;
+    margin: auto;
+    text-decoration: none;
+}
+
+#notification-modal .nav-notif ul li i {
+    font-size: 9px;
+    margin: auto;
+    color: #ff0000;
+    margin-left: 2px;
+}
+
+#notification-modal .isi-notif-lamaran .belum-dibaca {
+    background-color: #ffe8e9;
+}
+
+#notification-modal .isi-notif-lowongan,
+#notification-modal .isi-notif-lamaran {
+    height: 420px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#notification-modal .isi-notif-lowongan {
+    display: none;
+}
+
+/* -------------------------
+    Notification Lowongan 
+----------------------------*/
+
+#notification-modal .isi-notif-lowongan a {
+    text-decoration: none;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif {
+    padding: 15px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 265px;
+        height: 1px;
+        bottom: 1px;
+        background-color: #cfcfcf;
+    }
+}
+
+#notification-modal .isi-notif-lowongan .belum-dibaca {
+    background-color: #ffe8e9;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .flex-ahli {
+    display: flex;
+    align-items: center;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .flex-ahli i {
+    font-size: 13px;
+    color: #ee1c25;
+    margin-right: 5px;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .flex-ahli p {
+    font-size: 10px;
+    font-weight: 400;
+    color: #4d4d4d;
+    margin-bottom: auto;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .nama-lowongan {
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    padding: 5px 0;
+    margin-bottom: auto;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .tempat-lowongan {
+    font-size: 10px;
+    font-weight: 400;
+    color: #ee1c25;
+    margin-bottom: auto;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .gaji {
+    font-size: 10px;
+    font-weight: 400;
+    color: #4d4d4d;
+    margin-bottom: auto;
+}
+
+/* -------------------------
+    Notification Lamaran 
+----------------------------*/
+#notification-modal .isi-notif-lamaran a {
+    text-decoration: none;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif {
+    padding: 15px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 265px;
+        height: 1px;
+        bottom: 1px;
+        background-color: #cfcfcf;
+    }
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .status-lamaran {
+    display: flex;
+    align-items: center;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .status-lamaran {
+    margin-bottom: 5px;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .status-lamaran i {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .status-lamaran p {
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: auto;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .interview p,
+#notification-modal .isi-notif-lamaran .card-notif .interview i {
+    color: #1ba1ec;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .dilihat p,
+#notification-modal .isi-notif-lamaran .card-notif .dilihat i,
+#notification-modal .isi-notif-lamaran .card-notif .terkirim p,
+#notification-modal .isi-notif-lamaran .card-notif .terkirim i {
+    color: #e2a300;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .tidak-lolos p,
+#notification-modal .isi-notif-lamaran .card-notif .tidak-lolos i {
+    color: #848484;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .pernyataan {
+    font-size: 10px;
+    font-weight: 400;
+    color: #111111;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* text-align: justify; */
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .pernyataan span {
+    font-weight: 700;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .tanggal {
+    font-size: 10px;
+    font-weight: 400;
+    color: #4d4d4d;
+    margin-top: 5px;
+    margin-bottom: auto;
+}
+
+#notification-modal .action-notif {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#notification-modal .action-notif a {
+    font-size: 10px;
+    font-weight: 700;
+    color: #ee1c25;
+    margin-top: 10px;
+}
+
+/* -------------------------
+        Profile Account 
+----------------------------*/
+
+.profile-user {
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.profile-user * {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.profile-user .fa-angle-down {
+    align-self: self-start;
+    font-size: 22px;
+    color: #6d6e73;
+}
+
+.profile-user .name {
+    color: #6d6e73;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile-user .status {
+    color: #ee1c25;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile-user .foto-profile {
+    width: 33px;
+    border-radius: 50%;
+}
+
+.dropdown .profile-down a {
+    font-size: 12px;
+}
+
+.dropdown .profile-down a:hover {
+    background-color: #84848441;
+}
+
+/* -------------------------
+        GUEST ACCOUNT 
+----------------------------*/
+.navbar .collapse-navbar .auth-button {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    /* border: 1px solid #000000; */
+}
+
+.navbar .collapse-navbar .auth-button a {
+    width: 79px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar .collapse-navbar .auth-button a#masuk {
+    border: 1px #ee1c25 solid;
+    background-color: #ee1c25;
+    color: #ffffff;
+}
+
+.navbar .collapse-navbar .auth-button a#daftar {
+    border: 1px #6d6e73 solid;
+    /* background-color: #EE1C25; */
+    color: #6d6e73;
+}
+/* ============================
+   =-----------MAIN-----------=
+   ============================*/
+
+main {
+    margin-top: 100px;
+}
+
+.pencarian {
+    border-bottom: 1px solid #d2d2d2;
+    margin-top: -14px;
+    width: 100%;
+    height: 130px;
+    padding: 20px 0;
+    background-image: url("../assets/backgrouund-weare.png");
+    background-size: cover;
+}
+
+.pencarian .input-pencarian {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pencarian .input-pencarian .kota {
+    border: 1px solid #cfcfcf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 275px;
+    border-radius: 5px;
+    padding: 0 15px;
+    background-color: #ffffff;
+}
+
+.pencarian .input-pencarian .kota i {
+    color: #ee1c25;
+    font-size: 18px;
+    width: 30px;
+}
+
+.pencarian .input-pencarian .kota select {
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    &:focus {
+        border: none;
+    }
+}
+
+.pencarian .input-pencarian .cari {
+    border: 1px solid #cfcfcf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 821px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+.pencarian .input-pencarian .cari input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    background: none;
+    padding: 0 10px;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+.pencarian .input-pencarian .cari button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #ee1c25;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pencarian .label {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pencarian .label .waktu {
+    width: 275px;
+    display: flex;
+    align-items: center;
+}
+
+.pencarian .label .populer {
+    height: 40px;
+    width: 821px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pencarian .label .waktu a {
+    /* border: 1px solid; */
+    height: 30px;
+    padding: 0 20px;
+    margin-right: 12px;
+    border-radius: 500px;
+    text-decoration: none;
+    background-color: #ededed;
+    display: flex;
+    align-items: center;
+}
+.pencarian .label .waktu a p {
+    margin: auto;
+    color: #828282;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.pencarian .label .waktu a.active {
+    background-color: #fcddde;
+}
+
+.pencarian .label .waktu a.active p {
+    color: #ee1c25;
+    font-weight: 700;
+}
+
+.pencarian .label .populer .card-populer {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: #ededed;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 10px;
+    margin: 0 12px;
+}
+
+.pencarian .label .populer .card-populer p {
+    margin: auto;
+    font-size: 12px;
+    color: #828282;
+    font-weight: 400;
+}
+
+.pencarian .label .populer .card-populer i {
+    margin-right: 5px;
+    font-size: 12px;
+    color: #828282;
+}
+
+.lowongan-favorit {
+    width: 100%;
+}
+
+.lowongan-favorit .flex-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.lowongan-favorit .flex-header .header {
+    font-size: 16px;
+    font-weight: 600;
+    color: 600;
+}
+
+.lowongan-favorit .flex-header select {
+    height: 30px;
+    width: 108px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #292929;
+    font-weight: 500;
+    padding: 0 15px;
+}
+
+.lowongan-favorit .flex-lowongan-fav {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid; */
+    width: 100%;
+}
+
+.lowongan-favorit .flex-lowongan-fav .lowongan .card-lowongan {
+    width: 550px;
+    height: 155px;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.lowongan-favorit .flex-lowongan-fav .lowongan .active-card {
+    border: 1px solid #ee1c25;
+}
+
+.lowongan-favorit .flex-lowongan-fav .lowongan .non-active {
+    opacity: 25%;
+}
+
+.lowongan-favorit .flex-lowongan-fav .lowongan .card-lowongan .flex-header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+.lowongan-favorit
+    .flex-lowongan-fav
+    .lowongan
+    .card-lowongan
+    .flex-header
+    .posisi-lowongan
+    .posisi {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: auto;
+    /* margin-top: auto; */
+}
+
+.lowongan-favorit
+    .flex-lowongan-fav
+    .lowongan
+    .card-lowongan
+    .flex-header
+    .posisi-lowongan
+    .tempat {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ed1c25;
+    margin-top: 5px;
+    margin-bottom: auto;
+}
+
+.lowongan-favorit .flex-lowongan-fav .lowongan .card-lowongan .flex-header i {
+    color: #ed1c25;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.lowongan-favorit .flex-lowongan-fav .lowongan .card-lowongan .deskripsi {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 5px;
+}
+
+.lowongan-favorit .flex-lowongan-fav .lowongan .card-lowongan .deskripsi i {
+    font-size: 12px;
+    color: #bababa;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+}
+
+.lowongan-favorit
+    .flex-lowongan-fav
+    .lowongan
+    .card-lowongan
+    .deskripsi
+    .text-deskripsi {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4d4d4d;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.lowongan-favorit
+    .flex-lowongan-fav
+    .lowongan
+    .card-lowongan
+    .status-postingan-lamaran {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.lowongan-favorit
+    .flex-lowongan-fav
+    .lowongan
+    .card-lowongan
+    .status-postingan-lamaran
+    .status {
+    font-size: 10px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.lowongan-favorit
+    .flex-lowongan-fav
+    .lowongan
+    .card-lowongan
+    .status-postingan-lamaran
+    .aktif {
+    color: #4da934;
+}
+
+.lowongan-favorit
+    .flex-lowongan-fav
+    .lowongan
+    .card-lowongan
+    .status-postingan-lamaran
+    .tidak-aktif {
+    color: #797979;
+}
+
+.lowongan-favorit
+    .flex-lowongan-fav
+    .lowongan
+    .card-lowongan
+    .status-postingan-lamaran
+    ul
+    li {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 10px;
+    font-weight: 400;
+    color: #b3b3b3;
+    font-style: italic;
+}
+
+.lowongan-favorit
+    .flex-lowongan-fav
+    .lowongan
+    .card-lowongan
+    .status-postingan-lamaran
+    ul
+    li
+    p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.lowongan-favorit .flex-lowongan-fav .lowongan .more {
+    width: 100%;
+    height: 30px;
+    background-color: #ed1c25;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.lowongan-favorit .flex-lowongan-fav .lowongan .more i {
+    margin-left: 10px;
+}
+
+.lowongan-favorit .flex-lowongan-fav .deskripsi-lowongan {
+    width: 550px;
+    height: 552px;
+    border: 1px solid #ee1c25;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.lowongan-favorit .flex-lowongan-fav .deskripsi-lowongan .jabatan {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 auto;
+}
+
+.lowongan-favorit .flex-lowongan-fav .deskripsi-lowongan .tempat-kerja {
+    color: #ee1c25;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.lowongan-favorit .flex-lowongan-fav .deskripsi-lowongan .lamar {
+    width: 155px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #ed1c25;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.lowongan-favorit .flex-lowongan-fav .deskripsi-lowongan .garis-batas {
+    width: 550px;
+    height: 1px;
+    border: 1px solid #d6d6d6;
+    margin-left: -15px;
+}
+
+.lowongan-favorit .flex-lowongan-fav .deskripsi-lowongan .header-deskripsi {
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.lowongan-favorit .flex-lowongan-fav .deskripsi-lowongan .deskripsi {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+}
+/* ============================
+   =----------Footer----------=
+   ============================*/
+
+footer {
+    padding-top: 20px;
+    min-height: 280px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: 10px 0px 10px #0000001a;
+}
+
+footer .flex-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .flex-footer .footer-child {
+    width: 20%;
+    /* border: 1px solid; */
+}
+
+footer .flex-footer .img-logo-footer {
+    width: 175px;
+}
+
+footer .flex-footer .moto {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #4d4d4d;
+}
+
+footer .flex-footer .footer-child h2 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+footer .flex-footer .footer-child li a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #4d4d4d;
+    display: flex;
+    align-items: start;
+}
+
+footer .flex-footer .footer-child li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+footer .flex-footer .footer-child li a i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* -------------------------
+        Copy Right     
+----------------------------*/
+
+.copyright {
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+.copyright p {
+    font-size: 11px;
+    font-weight: 500;
+    color: #4d4d4d;
+    text-align: center;
+    margin: auto;
+}
+
+/* ============================
+   =----------MODAL-----------=
+   ============================*/
+
+/* -------------------------
+        Modal Rating 
+----------------------------*/
+#data-belum-lengkap .modal-dialog {
+    width: 349px;
+}
+
+#data-belum-lengkap .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#data-belum-lengkap .header i {
+    font-size: 16px;
+    color: #ff0000;
+    margin-right: 10px;
+}
+
+#data-belum-lengkap .header h2 {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: auto 0;
+}
+
+#data-belum-lengkap .pernyataan {
+    color: #4d4d4d;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+#data-belum-lengkap ul {
+    margin-left: 32px;
+}
+
+#data-belum-lengkap ul li {
+    color: #1e1e1e;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+#data-belum-lengkap .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#data-belum-lengkap .button button {
+    height: 30px;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#data-belum-lengkap .button button.batal {
+    background-color: #ffbec1;
+    color: #ff0000;
+}
+
+#data-belum-lengkap .button button.lengkapi {
+    background-color: #ed1c25;
+    color: #ffffff;
+}
+
+/* -------------------------
+    Modal Kirim Lamaran 
+----------------------------*/
+#modal-kirim-lamaran .modal-dialog {
+    width: 550px;
+}
+
+#modal-kirim-lamaran .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#modal-kirim-lamaran .header i {
+    font-size: 16px;
+    color: #4da934;
+    margin-right: 10px;
+}
+
+#modal-kirim-lamaran .header h2 {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: auto 0;
+}
+
+#modal-kirim-lamaran .pernyataan {
+    color: #4d4d4d;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-top: auto;
+}
+
+#modal-kirim-lamaran form {
+    width: 100%;
+    margin-top: 22px;
+}
+
+#modal-kirim-lamaran form .input-group {
+    margin-bottom: 10px;
+}
+
+#modal-kirim-lamaran form .input-group label {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    color: #313131;
+    text-transform: capitalize;
+    margin: 8px 0;
+}
+
+#modal-kirim-lamaran form .input-group input,
+#modal-kirim-lamaran form .input-group textarea {
+    border: 1px solid #d9d9d9;
+    font-size: 12px;
+    font-weight: 400;
+    color: #373737;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+#modal-kirim-lamaran form .input-group input {
+    width: 100%;
+    height: 37px;
+}
+
+#modal-kirim-lamaran form .input-group .waktu {
+    width: 128px;
+}
+
+#modal-kirim-lamaran form .input-group textarea {
+    width: 100%;
+    height: 98px;
+    padding: 5px 15px;
+}
+
+#modal-kirim-lamaran form .button {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#modal-kirim-lamaran form .button button {
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 20px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#modal-kirim-lamaran form .button button.batal {
+    background-color: #ffbec1;
+    color: #ff0000;
+}
+
+#modal-kirim-lamaran form .button button.kirim {
+    background-color: #ed1c25;
+    color: #ffffff;
+    width: 150px;
+}
+
+/* -------------------------
+    Modal Berhasil Dikirim 
+----------------------------*/
+#berhasil-dikirim .modal-dialog {
+    width: 344px;
+}
+
+#berhasil-dikirim .header {
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+#berhasil-dikirim img {
+    height: 62px;
+    display: block;
+    margin: 32px auto;
+}
+
+#berhasil-dikirim .pernyataan {
+    color: #4d4d4d;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 20px;
+}
+
+#berhasil-dikirim .pernyataan span {
+    font-weight: 700;
+}
+
+#berhasil-dikirim button {
+    height: 30px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 20px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: #ed1c25;
+    color: #ffffff;
+}
+
+/* -------------------------
+        Modal Rating 
+----------------------------*/
+#rating-modal .modal-dialog {
+    width: 344px;
+}
+
+#rating-modal .header {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+}
+
+#rating-modal .bintang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+#rating-modal .bintang i {
+    font-size: 25px;
+    margin: 5px;
+    color: #eebd74;
+}
+
+#rating-modal .batas {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#rating-modal .batas .garis {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    height: 1px;
+}
+
+#rating-modal .batas p {
+    margin: auto 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #4d4d4d;
+}
+
+#rating-modal textarea {
+    height: 98px;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    color: #0c0c0c;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #0c0c0c;
+}
+
+#rating-modal .button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rating-modal .button button {
+    height: 30px;
+    width: 90px;
+    font-size: 12px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#rating-modal .button .batal {
+    color: #ff0000;
+    background-color: #ffbec1;
+    border: 1px solid #ffbec1;
+}
+
+#rating-modal .button .kirim {
+    color: #ffffff;
+    background-color: #ed1c25;
+    border: 1px solid #ed1c25;
+}
+
+/* ============================
+   =---------RESPONSIF--------=
+   ============================*/
+
+@media only screen and (min-width: 767px) {
+    /* ========== Navbar ==========*/
+    .navbar .hide-nav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* ========== Navbar ==========*/
+    .navbar {
+        width: 100%;
+        background-color: white;
+    }
+
+    .navbar .container {
+        margin: 0;
+        width: 100%;
+        position: relative;
+        /* border: 1px solid; */
+    }
+
+    .navbar .hide-nav {
+        display: flex;
+        /* border: 1px solid; */
+        margin-right: auto;
+    }
+
+    .navbar .hide-nav img {
+        width: 100px;
+    }
+
+    .navbar #navbar-link {
+        /* margin-left: -30px; */
+        width: 200vw;
+        height: 20vh;
+        position: absolute;
+        left: -20px;
+        top: -200px;
+        background-color: #ffffff;
+        z-index: -1;
+        transition-timing-function: ease;
+    }
+
+    .navbar #navbar-link ul {
+        display: block;
+    }
+
+    .navbar #navbar-link ul li {
+        padding: 10px 20px;
+    }
+
+    .navbar #navbar-link .img-nav {
+        display: none;
+    }
+
+    .navbar #navbar-link.show-nav {
+        display: block;
+    }
+
+    .navbar #navbar-kanan .auth-button {
+        display: flex;
+        justify-content: space-between;
+        width: 160px;
+        /* border: 1px solid; */
+    }
+
+    .navbar #navbar-kanan .img-telkom,
+    .navbar #navbar-kanan .garis-verical {
+        display: none;
+    }
+
+    /* Navbar Account */
+    .navbar #navbar-kanan ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar #navbar-kanan ul li .dropdown .profile-user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar #navbar-kanan ul li .dropdown .profile-user img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar #navbar-kanan ul li .dropdown .profile-user i {
+        font-size: 12px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .navbar #navbar-kanan ul li .dropdown .profile-user .name-profile p {
+        font-size: 10px;
+    }
+
+    .navbar #navbar-kanan .notifiction {
+        /* border: 1px solid; */
+        width: 30px;
+    }
+
+    /* Modal Notification */
+    #notification-modal .modal-dialog {
+        margin-left: 88px;
+    }
+
+    /* ========== Header ==========*/
+    header .gambar-orang img {
+        display: none;
+    }
+
+    header .pencarian {
+        width: 100%;
+    }
+
+    header .pencarian .location {
+        width: 150px;
+    }
+
+    header .pencarian .input-group input {
+        width: 80%;
+    }
+
+    header .popular .card-popular {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    /* ========== Main ==========*/
+
+    /* ========== Footer ==========*/
+    footer .flex-footer .footer-child {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    footer .flex-footer .footer-child h2 {
+        margin-bottom: 10px;
+    }
+}

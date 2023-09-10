@@ -1,0 +1,945 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================
+   =----------NAVBAR----------=
+   ============================*/
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0px 5px #6d6f71;
+    height: 82px;
+    z-index: 1000;
+}
+
+.navbar-toggler .fa-bars {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.navbar-collapse {
+    margin-left: 70px;
+}
+
+.nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-item .nav-link {
+    font-weight: 500;
+    color: #393939;
+    font-size: 14px;
+}
+
+.notifiction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.garis-verical {
+    width: 0px;
+    height: 26px;
+    border: 1px #c2c2c2 solid;
+}
+
+.notifiction .nav-link {
+    /* border: 1px solid; */
+    position: relative;
+}
+
+.nav-link .fa-bell {
+    font-size: 20px;
+    text-align: center;
+    color: #c2c2c2;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-link .fa-bell .bulat {
+    position: absolute;
+    top: 6px;
+    right: 17px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #ee1c25;
+    border: 2px solid #ffffff;
+}
+
+/* -------------------------
+    Modal Notification 
+----------------------------*/
+#notification-modal .modal-dialog {
+    margin-right: 200px;
+    margin-top: 45px;
+    width: 338px;
+    padding: 20px;
+}
+
+#notification-modal .header-notif {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+}
+
+#notification-modal .garis-notif {
+    border: 1px solid #dfdfdf;
+    width: 100%;
+}
+
+#notification-modal .nav-notif ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    height: 40px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        bottom: 1px;
+        background-color: #cfcfcf;
+    }
+}
+
+#notification-modal .nav-notif ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+#notification-modal .nav-notif ul li.active {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 3px;
+        bottom: 1px;
+        background-color: #ee1c25;
+    }
+}
+
+#notification-modal .nav-notif ul li.active p {
+    color: #ff0000;
+    font-weight: 600;
+}
+
+#notification-modal .nav-notif ul li p {
+    margin: auto;
+    font-size: 11px;
+    font-weight: 500;
+    color: #4d4d4d;
+    margin: auto;
+    text-decoration: none;
+}
+
+#notification-modal .nav-notif ul li i {
+    font-size: 9px;
+    margin: auto;
+    color: #ff0000;
+    margin-left: 2px;
+}
+
+#notification-modal .isi-notif-lamaran .belum-dibaca {
+    background-color: #ffe8e9;
+}
+
+#notification-modal .isi-notif-lowongan,
+#notification-modal .isi-notif-lamaran {
+    height: 420px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#notification-modal .isi-notif-lowongan {
+    display: none;
+}
+
+/* -------------------------
+    Notification Lowongan 
+----------------------------*/
+
+#notification-modal .isi-notif-lowongan a {
+    text-decoration: none;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif {
+    padding: 15px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 265px;
+        height: 1px;
+        bottom: 1px;
+        background-color: #cfcfcf;
+    }
+}
+
+#notification-modal .isi-notif-lowongan .belum-dibaca {
+    background-color: #ffe8e9;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .flex-ahli {
+    display: flex;
+    align-items: center;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .flex-ahli i {
+    font-size: 13px;
+    color: #ee1c25;
+    margin-right: 5px;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .flex-ahli p {
+    font-size: 10px;
+    font-weight: 400;
+    color: #4d4d4d;
+    margin-bottom: auto;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .nama-lowongan {
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    padding: 5px 0;
+    margin-bottom: auto;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .tempat-lowongan {
+    font-size: 10px;
+    font-weight: 400;
+    color: #ee1c25;
+    margin-bottom: auto;
+}
+
+#notification-modal .isi-notif-lowongan .card-notif .gaji {
+    font-size: 10px;
+    font-weight: 400;
+    color: #4d4d4d;
+    margin-bottom: auto;
+}
+
+/* -------------------------
+    Notification Lamaran 
+----------------------------*/
+#notification-modal .isi-notif-lamaran a {
+    text-decoration: none;
+}
+#notification-modal .isi-notif-lamaran .card-notif {
+    padding: 15px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 265px;
+        height: 1px;
+        bottom: 1px;
+        background-color: #cfcfcf;
+    }
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .status-lamaran {
+    display: flex;
+    align-items: center;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .status-lamaran {
+    margin-bottom: 5px;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .status-lamaran i {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .status-lamaran p {
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: auto;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .interview p,
+#notification-modal .isi-notif-lamaran .card-notif .interview i {
+    color: #1ba1ec;
+}
+#notification-modal .isi-notif-lamaran .card-notif .dilihat p,
+#notification-modal .isi-notif-lamaran .card-notif .dilihat i,
+#notification-modal .isi-notif-lamaran .card-notif .terkirim p,
+#notification-modal .isi-notif-lamaran .card-notif .terkirim i {
+    color: #e2a300;
+}
+#notification-modal .isi-notif-lamaran .card-notif .tidak-lolos p,
+#notification-modal .isi-notif-lamaran .card-notif .tidak-lolos i {
+    color: #848484;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .pernyataan {
+    font-size: 10px;
+    font-weight: 400;
+    color: #111111;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* text-align: justify; */
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .pernyataan span {
+    font-weight: 700;
+}
+
+#notification-modal .isi-notif-lamaran .card-notif .tanggal {
+    font-size: 10px;
+    font-weight: 400;
+    color: #4d4d4d;
+    margin-top: 5px;
+    margin-bottom: auto;
+}
+
+#notification-modal .action-notif {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#notification-modal .action-notif a {
+    font-size: 10px;
+    font-weight: 700;
+    color: #ee1c25;
+    margin-top: 10px;
+}
+
+/* -------------------------
+        Profile Account 
+----------------------------*/
+
+.profile-user {
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.profile-user * {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.profile-user .fa-angle-down {
+    align-self: self-start;
+    font-size: 22px;
+    color: #6d6e73;
+}
+
+.profile-user .name {
+    color: #6d6e73;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile-user .status {
+    color: #ee1c25;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile-user .foto-profile {
+    width: 33px;
+    border-radius: 50%;
+}
+
+/* -------------------------
+        GUEST ACCOUNT 
+----------------------------*/
+.auth-button {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    /* border: 1px solid #000000; */
+}
+
+.auth-button a {
+    width: 79px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.auth-button a#masuk {
+    border: 1px #ee1c25 solid;
+    background-color: #ee1c25;
+    color: #ffffff;
+}
+
+.auth-button a#daftar {
+    border: 1px #6d6e73 solid;
+    /* background-color: #EE1C25; */
+    color: #6d6e73;
+}
+
+/* ============================
+   =----------HEADER----------=
+   ============================*/
+header {
+    background-color: #ee1c25;
+    background-image: url("public/assets/frontend/assets/background-header.png");
+    height: 470px;
+    padding-top: 75px;
+    position: relative;
+    z-index: 50;
+    margin-top: 82px;
+}
+
+header .gambar-orang {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+}
+
+header .gambar-orang::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ee1c2500, #ee1c25);
+    /* opacity: .7; */
+}
+
+header .gambar-orang img {
+    margin-top: -38px;
+    width: 400px;
+}
+
+header .text-1 {
+    font-size: 26px;
+    text-align: center;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+header .text-1 span {
+    font-weight: 600;
+}
+
+header .text-2 {
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+
+/* -------------------------
+        Pencarian
+----------------------------*/
+
+.pencarian {
+    background-color: #ffffff;
+    border: #cfcfcf 1px solid;
+    /* padding: 10px; */
+    border-radius: 5px;
+    width: 773px;
+    height: 56px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 50px;
+}
+
+.pencarian .garis-verical-cari {
+    width: 0px;
+    height: 37px;
+    border: 1px #c2c2c2 solid;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.pencarian .fa-location-dot {
+    font-size: 24px;
+    color: #ee1c25;
+    margin-right: 10px;
+}
+
+.pencarian .fa-angle-down {
+    font-size: 18px;
+    color: #c1c1c1;
+}
+
+.pencarian .location {
+    font-size: 16px;
+    font-weight: 500;
+    width: 170px;
+    margin: auto;
+}
+
+.pencarian form input {
+    width: 470px;
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    background: none;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+.pencarian form button {
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ee1c25;
+    color: #ffffff;
+}
+
+/* -------------------------
+    Pencarian Popular 
+----------------------------*/
+
+.popular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.popular .text-popular {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.popular .card-popular {
+    height: 45px;
+    min-width: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff31;
+    margin-left: 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.popular .card-popular p,
+.popular .card-popular i {
+    margin: auto;
+}
+
+/* ============================
+   =----------MAIN----------=
+   ============================*/
+
+main {
+    position: absolute;
+    z-index: 500;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+/* -------------------------
+        Lowongan     
+----------------------------*/
+
+.lowongan {
+    margin-top: -100px;
+    min-height: 230px;
+}
+
+.lowongan .flex-lowongan {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    /* margin-bottom: 15px; */
+    align-items: end;
+}
+
+.lowongan .flex-lowongan h2 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.lowongan .flex-lowongan a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lowongan .flex-card-lowongan {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lowongan .flex-card-lowongan .card-lowongan {
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 270px;
+    min-height: 155px;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #dfdfdf;
+    margin-top: 15px;
+}
+
+.lowongan .flex-card-lowongan .card-lowongan .nama-lowongan {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lowongan .flex-card-lowongan .card-lowongan .tempat-lowongan {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ee1c25;
+    margin-bottom: 10px;
+}
+
+.lowongan .flex-card-lowongan .card-lowongan .deskripsi {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 2px; */
+}
+
+.lowongan .flex-card-lowongan .card-lowongan .deskripsi i {
+    width: 20px;
+    text-align: center;
+    color: #bababa;
+    /* border: #393939 1px solid; */
+    font-size: 12px;
+}
+
+.lowongan .flex-card-lowongan .card-lowongan .deskripsi .text-deskripsi {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #4d4d4d;
+}
+
+.lowongan .flex-card-lowongan .card-lowongan .flex-status {
+    display: flex;
+    margin-top: 10px;
+}
+
+.lowongan .flex-card-lowongan .card-lowongan .flex-status .status {
+    font-size: 10px;
+    font-weight: 500;
+    color: #4da934;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.lowongan .flex-card-lowongan .card-lowongan .flex-status .waktu {
+    font-size: 10px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.lowongan .flex-card-lowongan .card-lowongan .flex-status .waktu p {
+    margin: auto;
+}
+.lowongan .flex-card-lowongan .card-lowongan .flex-status ul {
+    margin: auto;
+}
+
+/* -------------------------
+        Category 
+----------------------------*/
+.category {
+    min-height: 230px;
+    margin-top: 20px;
+}
+
+.category .header-caregory {
+    font-size: 16px;
+    font-weight: 600;
+    /* margin-bottom: 20px; */
+}
+
+.category .flex-category-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category .flex-category-card .border-card {
+    border: 3px solid #ee1c25;
+    width: 200px;
+    height: 122px;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.category .flex-category-card .border-card .category-card {
+    background-size: cover;
+    width: 190px;
+    height: 112px;
+    border-radius: 17px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        opacity: 0.6;
+        border-radius: 17px;
+        z-index: 1;
+    }
+}
+
+.category .flex-category-card .border-card .category-card .nama-category {
+    font-size: 14px;
+    color: #ffffff;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+/* -------------------------
+        Elearning
+----------------------------*/
+.elearning {
+    min-height: 250px;
+    /* background-color: #4DA934; */
+}
+
+.elearning .flex-elearning {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.elearning .flex-elearning h2 {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.elearning .flex-elearning a {
+    color: #ee1c25;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.elearning .flex-card-elearning {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.elearning .flex-card-elearning .card-elearning {
+    width: 361px;
+    height: 155px;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+}
+
+.elearning .flex-card-elearning .card-elearning .flex-card-inside-elearning {
+    display: flex;
+}
+
+.elearning
+    .flex-card-elearning
+    .card-elearning
+    .flex-card-inside-elearning
+    img {
+    height: 155px;
+    border-radius: 5px 0 0 5px;
+}
+
+.elearning
+    .flex-card-elearning
+    .card-elearning
+    .flex-card-inside-elearning
+    .deskripsi-elearning {
+    padding: 20px;
+}
+.elearning
+    .flex-card-elearning
+    .card-elearning
+    .flex-card-inside-elearning
+    .deskripsi-elearning
+    h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    height: 35px;
+}
+
+.elearning
+    .flex-card-elearning
+    .card-elearning
+    .flex-card-inside-elearning
+    .deskripsi-elearning
+    p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4d4d4d;
+}
+
+.elearning
+    .flex-card-elearning
+    .card-elearning
+    .flex-card-inside-elearning
+    .deskripsi-elearning
+    a {
+    width: 108px;
+    height: 37px;
+    background-color: #ee1c25;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.elearning
+    .flex-card-elearning
+    .card-elearning
+    .flex-card-inside-elearning
+    .deskripsi-elearning
+    a
+    p {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.elearning
+    .flex-card-elearning
+    .card-elearning
+    .flex-card-inside-elearning
+    .deskripsi-elearning
+    a
+    i {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+/* ============================
+   =----------Footer----------=
+   ============================*/
+
+footer {
+    padding-top: 20px;
+    height: 280px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: 10px 0px 10px #0000001a;
+}
+
+footer .flex-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .flex-footer .footer-child {
+    width: 25%;
+}
+
+footer .flex-footer .img-logo-footer {
+    width: 175px;
+}
+
+footer .flex-footer .moto {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #4d4d4d;
+}
+
+footer .flex-footer .footer-child h2 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+footer .flex-footer .footer-child li a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #4d4d4d;
+    display: flex;
+    align-items: start;
+}
+
+footer .flex-footer .footer-child li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+footer .flex-footer .footer-child li a i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* -------------------------
+        Copy Right     
+----------------------------*/
+
+.copyright {
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+.copyright p {
+    font-size: 11px;
+    font-weight: 500;
+    color: #4d4d4d;
+    text-align: center;
+    margin: auto;
+}
